@@ -1,0 +1,10 @@
+.botton {
+    background: #782888;
+    border: 0;
+    border: 15px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
