@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 // Carregar variáveis de ambiente
 dotenv.config();
 
-const jwtSecret = process.env.JWT_SECRET;
-//const jwtSecret = "askldjaskldlasjdkl21324"
+//const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = "askldjaskldlasjdkl21324"
 
 let users = []
 
