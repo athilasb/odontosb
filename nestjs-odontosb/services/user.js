@@ -8,17 +8,18 @@ function createToken(user){
 }
 
 function readToken(token){
-  try{
-    return jwt.verify(token, SECRET)
-  }catch(err){
-    throw new Error('Token inválido')
+  try {
+    jwt.verify(token, SECRET);
+    return true;
+  } catch (err) {
+    return false;
   }
 }
 
 export function verificaToken(token){
-   return readToken(token)
-  
+  return readToken(token);
 }
+
 export function cadastro (body){ 
   const user = users.find(({email}) => email === body.email);
   if(user) throw new Error('Email já cadastrado');

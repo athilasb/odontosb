@@ -51,7 +51,7 @@ export default function LoginPages() {
           <Input type="password" placeholder="sua senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')}/>
           <Botton>Entrar</Botton>
           {error && <p>{error}</p>}
-          <Link href="/cadastro">Não tem uma conta? Cadastre-se</Link>
+          <Link style={{color:"black"}} href="/cadastro">Não tem uma conta? Cadastre-se</Link>
         </form>
       </LoginCard>
     </div>

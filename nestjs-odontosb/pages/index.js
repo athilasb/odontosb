@@ -1,31 +1,12 @@
-import {getCookie, setCookie} from 'cookies-next';
-import {verificaToken} from '../services/user';
+
+import Main from '../src/components/auth/auth';
 
 export default function Home() {
   return (
-    <div>
-      pagina autentificada
-    </div>
-  )
-}
-
-
-export const  getServerSideProps = async({req, res}) => {
-  try {
-    const token = getCookie('authorization', {req, res});
-    if(!token) throw new Error('Token inválido')
-    verificaToken(token)
-    return {
-      props: {}
-    }
-  }catch (error) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: '/login'
-      },
-      props:{}
-    }
-  }
-
+    <Main auth={true}>
+      <div>
+        Página autenticada
+      </div>
+    </Main>
+  );
 }

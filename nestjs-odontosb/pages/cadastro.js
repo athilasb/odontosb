@@ -54,7 +54,7 @@ export default function CadastroPages() {
           <Input type="password" placeholder="Senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')} />
           <Botton>Cadastrar</Botton>
           {error && <p>{error}</p>}
-          <Link href="/login">Já tem uma conta? Faça login</Link>
+          <Link style={{color:"black"}} href="/login">Já tem uma conta? Faça login</Link>
         </form>
       </CadastroCard>
     </div>
