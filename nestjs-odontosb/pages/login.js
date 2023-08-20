@@ -24,7 +24,6 @@ export default function LoginPages() {
   const handleForm = async (event) => {
     try {
       event.preventDefault();
-      console.log(formData);
       const response = await fetch('/api/user/login', {
         method: 'POST',
         headers: {

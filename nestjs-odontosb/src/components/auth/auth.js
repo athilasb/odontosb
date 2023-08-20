@@ -16,8 +16,6 @@ export default function Main({ auth, children }) {
           return;
         }
         const isAuthenticated = await verificaToken(token);
-
-        console.log(isAuthenticated)
         if (isAuthenticated == false) {
           router.push('/login');
         }

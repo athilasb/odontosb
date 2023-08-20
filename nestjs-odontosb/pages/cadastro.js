@@ -25,7 +25,6 @@ export default function CadastroPages() {
   const handleForm = async (event) => {
     try {
       event.preventDefault();
-      console.log(formData);
       const response = await fetch('/api/user/cadastro', {
         method: 'POST',
         headers: {
