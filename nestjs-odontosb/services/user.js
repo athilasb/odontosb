@@ -14,6 +14,11 @@ function readToken(token){
     throw new Error('Token inválido')
   }
 }
+
+export function verificaToken(token){
+   return readToken(token)
+  
+}
 export function cadastro (body){ 
   const user = users.find(({email}) => email === body.email);
   if(user) throw new Error('Email já cadastrado');
