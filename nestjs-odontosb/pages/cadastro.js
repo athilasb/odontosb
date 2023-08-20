@@ -42,7 +42,7 @@ export default function CadastroPages() {
       setError(error.message);
     }
   }
-
+  
   return (
     <div className={styles.background}>
       <CadastroCard title="Cadastre sua conta">

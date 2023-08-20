@@ -1,15 +1,21 @@
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+// Carregar variáveis de ambiente
+dotenv.config();
+
+//const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = "askldjaskldlasjdkl21324"
 
 let users = []
-const SECRET = process.env.JWT_SECRET
 
 function createToken(user){
-  return jwt.sign({email: user.email, password: user.name}, SECRET)
+  return jwt.sign({email: user.email, password: user.name}, jwtSecret)
 }
 
 function readToken(token){
   try {
-    jwt.verify(token, SECRET);
+    jwt.verify(token, jwtSecret);
     return true;
   } catch (err) {
     return false;

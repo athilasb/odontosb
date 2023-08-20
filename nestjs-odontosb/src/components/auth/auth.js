@@ -15,13 +15,13 @@ export default function Main({ auth, children }) {
           router.push('/login');
           return;
         }
-
         const isAuthenticated = await verificaToken(token);
-        if (isAuthenticated) {
+
+        console.log(isAuthenticated)
+        if (isAuthenticated == false) {
           router.push('/login');
         }
       };
-
       checkAuth();
     }, []);
 
