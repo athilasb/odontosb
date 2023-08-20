@@ -42,7 +42,6 @@ export default function LoginPages() {
     }
   }
 
-  
   return (
     <div className={styles.background}>
       <LoginCard title="Entre em sua conta">

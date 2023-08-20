@@ -21,9 +21,7 @@ export default function CadastroPages() {
   const handleFormEdit = (event, name) => {
     setFormData({ ...formData, [name]: event.target.value });
   }
-
-
-
+  
   const handleForm = async (event) => {
     try {
       event.preventDefault();
