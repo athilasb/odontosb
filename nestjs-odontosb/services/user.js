@@ -4,7 +4,7 @@ let users = []
 const SECRET = process.env.JWT_SECRET
 
 function createToken(user){
-  return jwt.sign({email: user.email, password: user.name}, SECRET,{ expiresIn: '40s' })
+  return jwt.sign({email: user.email, email: user.name}, SECRET,{ expiresIn: '12h'})
 }
 
 function readToken(token){
