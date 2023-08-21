@@ -8,8 +8,6 @@ export default function Home() {
   )
 }
 
-
-
 export const getServerSideProps = withAuthServerSideProps(async ({ req, res }) => {
   return {
     props: {},
