@@ -12,9 +12,11 @@ import {withAuthServerSideProps } from '../services/auth';
 
 export default function CadastroPages() {
   const [formData, setFormData] = useState({
-    name: '',
+    cpf: '',
+    nome: '',
+    sobre_nome: '',
+    data_nascimento: '',
     email: '',
-    password: '',
   });
   const [error, setError] = useState('');
   const router = useRouter();
@@ -26,7 +28,7 @@ export default function CadastroPages() {
   const handleForm = async (event) => {
     try {
       event.preventDefault();
-      const response = await fetch('/api/user/cadastro', {
+      const response = await fetch('/api/pacientes/pacientes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,14 +44,16 @@ export default function CadastroPages() {
       setError(error.message);
     }
   }
-  
+  //input terá nome , sobre nome, data de nascimento e email
   return (
     <div className={styles.background}>
       <CadastroCard title="Cadastre sua conta">
         <form onSubmit={handleForm} className={styles.form}>
-          <Input type="text" placeholder="Login" required value={formData.name} onChange={(e) => handleFormEdit(e, 'name')} />
-          <Input type="email" placeholder="Email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
-          <Input type="password" placeholder="Senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')} />
+        <Input maxlength="11" type="text" placeholder="Preencha seu cpf" required value={formData.cpf} onChange={(e) => handleFormEdit(e, 'cpf')} />
+          <Input type="text" placeholder="Preencha seu nome" required value={formData.nome} onChange={(e) => handleFormEdit(e, 'nome')} />
+          <Input type="text" placeholder="Preencha seu sobre nome" required value={formData.sobre_nome} onChange={(e) => handleFormEdit(e, 'sobre_nome')} />
+          <Input type="date" placeholder="Preencha sua data de nascimento" required value={formData.data_nascimento} onChange={(e) => handleFormEdit(e, 'data_nascimento')} />
+          <Input type="email" placeholder="Seu email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
           <Botton>Cadastrar</Botton>
           {error && <p>{error}</p>}
           <Link style={{color:"black"}} href="/login">Já tem uma conta? Faça login</Link>

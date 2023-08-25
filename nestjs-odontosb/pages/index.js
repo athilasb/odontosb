@@ -1,9 +1,10 @@
 import {withAuthServerSideProps } from '../services/auth';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
-      pagina autentificada
+      <Link href="/pacientes">pacientes</Link>
     </div>
   )
 }

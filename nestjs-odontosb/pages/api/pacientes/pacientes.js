@@ -1,6 +1,6 @@
-import {cadastro , verificaToken} from '../../../services/user'
-
 import { getCookie } from 'cookies-next';
+import {cadastro } from '../../../services/paciente/paciente'
+import {verificaToken} from '../../../services/user'
 
 export default async function handler(req, res) {
     try {
