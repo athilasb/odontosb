@@ -6,8 +6,8 @@ import { useRouter } from 'next/router';
 import styles from '../styles/Cadastro.module.css';
 
 import CadastroCard from '../src/components/cadastroCard/cadastroCard';
-import Input from '../src/components/input/input';
-import Botton from '../src/components/botton/botton';
+import Input from '../src/html/components/input/input';
+import Botton from '../src/html/components/botton/botton';
 import {withAuthServerSideProps } from '../services/auth';
 
 export default function CadastroPages() {

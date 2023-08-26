@@ -6,9 +6,8 @@ import { useRouter } from 'next/router';
 import styles from '../styles/Cadastro.module.css';
 
 import CadastroCard from '../src/components/cadastroCard/cadastroCard';
-import Input from '../src/components/input/input';
-import Botton from '../src/components/botton/botton';
-import {withAuthServerSideProps } from '../services/auth';
+import Input from '../src/components/html/input/input';
+import Botton from '../src/components/html/botton/botton';
 
 export default function CadastroPages() {
   const [formData, setFormData] = useState({
@@ -47,22 +46,14 @@ export default function CadastroPages() {
     <div className={styles.background}>
       <CadastroCard title="Cadastre sua conta">
         <form onSubmit={handleForm} className={styles.form}>
-          <Input type="text" placeholder="Login" required value={formData.name} onChange={(e) => handleFormEdit(e, 'name')} />
-          <Input type="email" placeholder="Email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
-          <Input type="password" placeholder="Senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')} />
+          <Input icone="ion:person" type="text" placeholder="Login" required value={formData.name} onChange={(e) => handleFormEdit(e, 'name')} />
+          <Input icone="ic:baseline-email"  type="email" placeholder="Email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
+          <Input icone="uil:padlock"  type="password" placeholder="Senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')} />
           <Botton>Cadastrar</Botton>
           {error && <p>{error}</p>}
           <Link style={{color:"black"}} href="/login">Já tem uma conta? Faça login</Link>
-          <Link href="/">home</Link>
         </form>
       </CadastroCard>
     </div>
   );
 }
-
-
-export const getServerSideProps = withAuthServerSideProps(async ({ req, res }) => {
-  return {
-    props: {},
-  };
-});

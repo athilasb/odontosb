@@ -1,5 +1,5 @@
 .botton {
-    background: #782888;
+    background: var(--menu);
     border: 0;
     border: 15px;
     padding: 10px;

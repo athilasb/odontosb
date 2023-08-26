@@ -6,8 +6,8 @@ import { useRouter } from 'next/router';
 import styles from '../styles/Login.module.css';
 
 import LoginCard from '../src/components/loginCard/loginCard';
-import Input from '../src/components/input/input';
-import Botton from '../src/components/botton/botton';
+import Input from '../src/components/html/input/input';
+import Botton from '../src/components/html/botton/botton';
 export default function LoginPages() {
 
   const [formData, setFormData] = useState({
@@ -43,10 +43,10 @@ export default function LoginPages() {
 
   return (
     <div className={styles.background}>
-      <LoginCard title="Entre em sua conta">
+      <LoginCard title="Login">
         <form onSubmit={handleForm} className={styles.form}>
-          <Input type="email" placeholder="Seu email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
-          <Input type="password" placeholder="sua senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')}/>
+          <Input icone="ion:person" type="email" placeholder="Seu email" required value={formData.email} onChange={(e) => handleFormEdit(e, 'email')} />
+          <Input icone="uil:padlock" type="password" placeholder="sua senha" required value={formData.password} onChange={(e) => handleFormEdit(e, 'password')}/>
           <Botton>Entrar</Botton>
           {error && <p>{error}</p>}
           <Link style={{color:"black"}} href="/cadastro">Não tem uma conta? Cadastre-se</Link>

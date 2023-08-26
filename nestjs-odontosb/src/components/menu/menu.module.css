@@ -1,0 +1,23 @@
+.menu{
+    width: 100%;
+    height: 100%;
+    background: var(--menu);
+    border-right: 1px solid var(--linha);
+    margin-bottom: 15px;
+}
+
+.itens{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    color: #fff;
+}
+.itens a{
+    padding: 20px 0px;
+    display: block;
+
+}
+
+.itens a.active{
+    border-bottom: solid 3px;
+}

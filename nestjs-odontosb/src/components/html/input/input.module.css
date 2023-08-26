@@ -1,0 +1,24 @@
+.input {
+    border: 0;
+    border: 15px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid var(--quarta);
+    background: var(--alternativo);
+}
+.icone{
+    color: var(--quarta);
+    margin-left: -18px;
+    position: relative;
+    right: 15px;
+}
+.input::placeholder{
+    color: var(--quarta);
+}
+
+.position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}	
