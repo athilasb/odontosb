@@ -1,0 +1,25 @@
+.menu{
+    width: 100%;
+    height: 100%;
+    background: var(--principal);
+    border-right: 1px solid var(--linha);
+    margin-bottom: 15px;
+    color: #fff;
+    padding: 10px 0px;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.itens{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input{
+    max-width: 350px;
+    width: 100%;
+}
