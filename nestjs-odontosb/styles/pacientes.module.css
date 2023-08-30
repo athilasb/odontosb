@@ -1,0 +1,17 @@
+.conteudo{
+    margin-top: 50px;
+}
+
+.list{
+    
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px var(--menu);
+    padding: 10px;
+    border-radius: 15px;
+    color: var(--menu);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 20px; 
+    font-weight: 500;
+}

@@ -6,7 +6,8 @@ import Titulo from '../components/html/titulo/titulo';
 import Submenu from '../components/submenu/submenu';
 
 const menuItems = [
-    { name: 'Página Inicial', link: '/page' },
+    { name: 'inicio', link: '/' },
+    { name: 'Pacientes', link: '/pacientes' },
     { name: 'login', link: '/page1' },  
 ];
 
